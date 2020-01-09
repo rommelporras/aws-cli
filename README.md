@@ -1,13 +1,11 @@
 # AWS CLI Docker Container
 [![Docker Pulls](https://img.shields.io/docker/pulls/rommelporras/aws-cli.svg)](https://hub.docker.com/r/rommelporras/aws-cli/)
 [![Docker Stars](https://img.shields.io/docker/stars/rommelporras/aws-cli.svg)](https://hub.docker.com/r/rommelporras/aws-cli/)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/sekka1/aws-cli-docker.svg?style=social)](https://twitter.com/intent/tweet?text=AWS%20CLI%20in%20a%20%40Docker%20container%20%40AWSCLI:&url=https://hub.docker.com/r/rommelporras/aws-cli)
-
 
 # AWS CLI Version
 
-* [1.16.313 - Release Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
-* [1.16.305 - Release Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
+* [1.16.313 - Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
+* [1.16.305 - Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
 
 # Supported tags and Dockerfile links
 
@@ -17,17 +15,17 @@
 # Build
 
 ```
-docker build -t rommelporras/aws-cli-docker:latest .
+docker build -t rommelporras/aws-cli:latest .
 ```
 or
 ```
-docker build -t rommelporras/aws-cli-docker:1.16.313 .
+docker build -t rommelporras/aws-cli:1.16.313 .
 ```
 # Description
 
 Docker container with the AWS CLI installed.
 
-Using [Alpine linux](https://hub.docker.com/_/alpine/).  The Docker image is 49MB
+Using [Alpine linux](https://hub.docker.com/_/alpine/).  The Docker image is 50MB
 
 An automated build of this image is on Docker Hub: https://hub.docker.com/r/rommelporras/aws-cli/
 
