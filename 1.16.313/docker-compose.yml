@@ -1,7 +1,7 @@
 version: '3'
 services:
   aws:
-    image: rommelporras/aws-cli:1.16.305
+    image: rommelporras/aws-cli:1.16.313
     environment:
       AWS_ACCESS_KEY_ID: 'AKXXXXXXXXXXXX'
       AWS_SECRET_ACCESS_KEY: 'XXXswegWvXXXXXXXXXXXXXXXXXXXXXX'

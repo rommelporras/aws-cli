@@ -4,14 +4,15 @@
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/sekka1/aws-cli-docker.svg?style=social)](https://twitter.com/intent/tweet?text=AWS%20CLI%20in%20a%20%40Docker%20container%20%40AWSCLI:&url=https://hub.docker.com/r/rommelporras/aws-cli)
 
 
-# Supported tags and respective `Dockerfile` links
-
-- [`latest` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305)
-- [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305)
-
 # AWS CLI Version
 
+* [1.16.313 - Release Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
 * [1.16.305 - Release Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
+
+# Supported tags and Dockerfile links
+
+- [`latest/1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313)
+- [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305)
 
 # Build
 
@@ -20,7 +21,7 @@ docker build -t rommelporras/aws-cli-docker:latest .
 ```
 or
 ```
-docker build -t rommelporras/aws-cli-docker:1.16.305 .
+docker build -t rommelporras/aws-cli-docker:1.16.313 .
 ```
 # Description
 
