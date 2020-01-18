@@ -4,28 +4,33 @@
 
 # AWS CLI Version
 
+* [1.17.5 - Jan 18, 2020](https://github.com/aws/aws-cli/releases/tag/1.17.5)
 * [1.16.313 - Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
 * [1.16.305 - Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
 
 # Supported tags and Dockerfile links
 
-- [`latest/1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313)
+- [`latest/1.17.5` (*1.17.5/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.17.5)
+- [`1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313)
 - [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305)
 
 # Build
-
 ```
-docker build -t rommelporras/aws-cli:latest .
+docker run -rm \
+    --env AWS_ACCESS_KEY_ID=<<YOUR_ACCESS_KEY>> \
+    --env AWS_SECRET_ACCESS_KEY=<<YOUR_SECRET_ACCESS>> \
+    rommelporras/aws-cli \
+    s3 ls
 ```
 or
 ```
-docker build -t rommelporras/aws-cli:1.16.313 .
+docker build -t rommelporras/aws-cli:latest .
 ```
 # Description
 
 Docker container with the AWS CLI installed.
 
-Using [Alpine linux](https://hub.docker.com/_/alpine/).  The Docker image is 50MB
+Using [Alpine linux](https://hub.docker.com/_/alpine/). The Docker image is 49MB
 
 An automated build of this image is on Docker Hub: https://hub.docker.com/r/rommelporras/aws-cli/
 

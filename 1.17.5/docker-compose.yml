@@ -1,0 +1,8 @@
+version: '3'
+services:
+  aws:
+    image: rommelporras/aws-cli:1.17.5
+    environment:
+      AWS_ACCESS_KEY_ID: 'AKXXXXXXXXXXXX'
+      AWS_SECRET_ACCESS_KEY: 'XXXswegWvXXXXXXXXXXXXXXXXXXXXXX'
+      AWS_DEFAULT_REGION: 'eu-west-1'
