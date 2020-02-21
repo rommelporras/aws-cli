@@ -2,19 +2,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/rommelporras/aws-cli.svg)](https://hub.docker.com/r/rommelporras/aws-cli/)
 [![Docker Stars](https://img.shields.io/docker/stars/rommelporras/aws-cli.svg)](https://hub.docker.com/r/rommelporras/aws-cli/)
 
-# AWS CLI Version
+# Supported tags, Dockerfile links, AWS Release Date
 
-* [1.17.5 - Jan 18, 2020](https://github.com/aws/aws-cli/releases/tag/1.17.5)
-* [1.16.313 - Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
-* [1.16.305 - Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
+- [`latest/1.18.4` (*1.18.4/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.18.4) - [Feb 21, 2020](https://github.com/aws/aws-cli/releases/tag/1.18.4)
+- [`1.17.5` (*1.17.5/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.17.5) - [Jan 18, 2020](https://github.com/aws/aws-cli/releases/tag/1.17.5)
+- [`1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313) - [Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
+- [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305) - [Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
 
-# Supported tags and Dockerfile links
-
-- [`latest/1.17.5` (*1.17.5/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.17.5)
-- [`1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313)
-- [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305)
-
-# Build
+# Run / Build
 ```
 docker run -rm \
     --env AWS_ACCESS_KEY_ID=<<YOUR_ACCESS_KEY>> \
@@ -34,6 +29,21 @@ Using [Alpine linux](https://hub.docker.com/_/alpine/). The Docker image is 49MB
 
 An automated build of this image is on Docker Hub: https://hub.docker.com/r/rommelporras/aws-cli/
 
+# Install
+
+Configure:
+```
+export AWS_ACCESS_KEY_ID="<awsid>"
+export AWS_SECRET_ACCESS_KEY="<awskey>"
+export AWS_DEFAULT_REGION="eu-west-1"
+
+alias aws='docker run --rm -t $(tty &>/dev/null && echo "-i") -e "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" -e "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" -e "AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}" -v "$(pwd):/project" rommelporras/aws-cli'
+```
+or
+```
+alias aws='docker run --rm -t $(tty &>/dev/null && echo "-i") -e "AWS_ACCESS_KEY_ID=AKIA2XXXXXXXXX" -e "AWS_SECRET_ACCESS_KEY=q/z4m+jgXXXXXXXXXX" -e "AWS_DEFAULT_REGION=eu-west-1" -v "$(pwd):/project" rommelporras/aws-cli'
+```
+
 ## Example Usage:
 
 ### Describe an instance:
@@ -44,6 +54,10 @@ An automated build of this image is on Docker Hub: https://hub.docker.com/r/romm
     --env AWS_DEFAULT_REGION=us-east-1 \
     rommelporras/aws-cli \
     ec2 describe-instances --instance-ids i-90949d7a
+    
+    or
+    
+    aws ec2 describe-instances --instance-ids i-90949d7a #apply alias first
 
 output:
 
