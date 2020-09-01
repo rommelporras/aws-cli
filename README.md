@@ -4,7 +4,8 @@
 
 # Supported tags, Dockerfile links, AWS Release Date
 
-- [`latest/1.18.4` (*1.18.4/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.18.4) - [Feb 21, 2020](https://github.com/aws/aws-cli/releases/tag/1.18.4)
+- [`latest/1.18.129` (*1.18.129/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.18.129) - [Sept 01, 2020](https://github.com/aws/aws-cli/releases/tag/1.18.129)
+- [`1.18.4` (*1.18.4/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.18.4) - [Feb 21, 2020](https://github.com/aws/aws-cli/releases/tag/1.18.4)
 - [`1.17.5` (*1.17.5/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.17.5) - [Jan 18, 2020](https://github.com/aws/aws-cli/releases/tag/1.17.5)
 - [`1.16.313` (*1.16.313/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.313) - [Jan 09, 2020](https://github.com/aws/aws-cli/releases/tag/1.16.313)
 - [`1.16.305` (*1.16.305/Dockerfile*)](https://github.com/rommelporras/aws-cli/tree/master/1.16.305) - [Dec 18, 2019](https://github.com/aws/aws-cli/releases/tag/1.16.305)
